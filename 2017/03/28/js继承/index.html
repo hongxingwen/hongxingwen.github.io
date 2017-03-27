@@ -6,21 +6,21 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Hello World | Hexo</title>
+  <title>js继承 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick">
+  <meta name="description" content="js继承有以下几种：1.类式继承：将第一个类的实例赋值给第二个类的原型。
+12345678910111213141516171819202122//创建父类function Parentfun()&amp;#123;    this.a=[1,2];&amp;#125;Parentfun.prototype.d=1;//创建子类function Childfun()&amp;#123;    this.c=3;&amp;#125">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://yoursite.com/2017/03/27/hello-world/index.html">
+<meta property="og:title" content="js继承">
+<meta property="og:url" content="http://yoursite.com/2017/03/28/js继承/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick">
-<meta property="og:updated_time" content="2017-03-27T15:35:23.353Z">
+<meta property="og:description" content="js继承有以下几种：1.类式继承：将第一个类的实例赋值给第二个类的原型。
+12345678910111213141516171819202122//创建父类function Parentfun()&amp;#123;    this.a=[1,2];&amp;#125;Parentfun.prototype.d=1;//创建子类function Childfun()&amp;#123;    this.c=3;&amp;#125">
+<meta property="og:updated_time" content="2017-03-27T17:03:56.057Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick">
+<meta name="twitter:title" content="js继承">
+<meta name="twitter:description" content="js继承有以下几种：1.类式继承：将第一个类的实例赋值给第二个类的原型。
+12345678910111213141516171819202122//创建父类function Parentfun()&amp;#123;    this.a=[1,2];&amp;#125;Parentfun.prototype.d=1;//创建子类function Childfun()&amp;#123;    this.c=3;&amp;#125">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -156,35 +156,54 @@ Quick">
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-hello-world" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-js继承" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Hello World
+      js继承
     </h1>
   
 
         
-        <a href="/2017/03/27/hello-world/" class="archive-article-date">
-  	<time datetime="2017-03-27T15:35:23.352Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-27</time>
+        <a href="/2017/03/28/js继承/" class="archive-article-date">
+  	<time datetime="2017-03-27T17:02:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-28</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+        <h1 id="js继承有以下几种："><a href="#js继承有以下几种：" class="headerlink" title="js继承有以下几种："></a>js继承有以下几种：</h1><p>1.类式继承：将第一个类的实例赋值给第二个类的原型。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line">//创建父类</div><div class="line">function Parentfun()&#123;</div><div class="line">    this.a=[1,2];</div><div class="line">&#125;</div><div class="line">Parentfun.prototype.d=1;</div><div class="line">//创建子类</div><div class="line">function Childfun()&#123;</div><div class="line">    this.c=3;</div><div class="line">&#125;</div><div class="line">Childfun.prototype=new Parentfun();</div><div class="line">//创建objs1,obj2两个实例</div><div class="line">var objs1=new Childfun();</div><div class="line">var objs2=new Childfun();</div><div class="line">console.log(objs1.c);  //1  能够读到父类（Parentfun）原型上的属性</div><div class="line">console.log(objs2.a);  //[1,2]</div><div class="line">objs1.a.push(4);</div><div class="line">console.log(objs2.a); //[1,2,4]  </div><div class="line">//objs1对a的修改，直接影响了objs2.a的值，??</div><div class="line">//这是类式继承的缺点:</div><div class="line">//1、多个实例（objs1,objs2），实例(objs1)对父类进行操作，会影响其他实例(objs2);</div><div class="line">//2、在实例化父类（Parentfun）的时候，没法对父类（Parentfun）构造函数内的属性初始化。</div><div class="line">#对其他继承方式对比： 类式继承可以用instanceof 来检测某个对象是否是某个类的实例，无法初始化父类的属性</div></pre></td></tr></table></figure>
+<p>2.构造函数继承：通过call/apply</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line">//创建父类</div><div class="line">function Parentfun(a)&#123;</div><div class="line">    this.a=a;</div><div class="line">&#125;</div><div class="line">Parentfun.prototype.d=function()&#123;</div><div class="line">  console.log(&apos;aa&apos;);</div><div class="line">&#125;;</div><div class="line">//创建子类</div><div class="line">function Childfun(a)&#123;</div><div class="line">    Parentfun.call(this,a);</div><div class="line">&#125;</div><div class="line">//创建objs1,obj2两个实例</div><div class="line">var objs1=new Childfun([1,2]);</div><div class="line">var objs2=new Childfun([1,2]);</div><div class="line">console.log(objs2.a); //[1,2]</div><div class="line">objs1.a.push(4);</div><div class="line">console.log(objs1.a); //[1,2,4]</div><div class="line">console.log(objs2.a); //[1,2]</div><div class="line">objs1.d(); //&quot;error&quot;</div><div class="line">//没有类式继承的问题，但是父类（Parentfun）的方法（d）没法取到</div><div class="line">//构造函数继承的缺点：</div><div class="line">//无法取到父类的属性/方法 --&gt;原因是通过call/apply实现继承，这种类型的继承没涉及原型prototype</div><div class="line">#对其他继承方式对比： 无法通过instanceof来判断某个对象是否是某个类的实例，无法操作父类原型上的属性，但是可以传参对父类的属性初始化</div></pre></td></tr></table></figure>
+<h3 id="两种继承方式比较"><a href="#两种继承方式比较" class="headerlink" title="两种继承方式比较"></a>两种继承方式比较</h3><table>
+<thead>
+<tr>
+<th>继承方式</th>
+<th>instanceof能否判断</th>
+<th>能否操作父类原型</th>
+<th>能否初始化父类属性</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>类式继承</td>
+<td>能</td>
+<td>能</td>
+<td>不能</td>
+</tr>
+<tr>
+<td>构造函数继承</td>
+<td>不能</td>
+<td>不能</td>
+<td>能</td>
+</tr>
+</tbody>
+</table>
 
       
 
@@ -264,7 +283,7 @@ Quick">
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2017/03/27/hello-world/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2017/03/28/js继承/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -278,15 +297,11 @@ Quick">
   
 <nav id="article-nav">
   
-    <a href="/2017/03/28/js继承/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          js继承
-        
-      </div>
-    </a>
   
+    <a href="/2017/03/27/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Hello World</div>
+      <i class="icon-circle-right"></i>
+    </a>
   
 </nav>
 

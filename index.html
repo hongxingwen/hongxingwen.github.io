@@ -151,6 +151,84 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-js继承" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/03/28/js继承/">js继承</a>
+    </h1>
+  
+
+        
+        <a href="/2017/03/28/js继承/" class="archive-article-date">
+  	<time datetime="2017-03-27T17:02:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-28</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="js继承有以下几种："><a href="#js继承有以下几种：" class="headerlink" title="js继承有以下几种："></a>js继承有以下几种：</h1><p>1.类式继承：将第一个类的实例赋值给第二个类的原型。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line">//创建父类</div><div class="line">function Parentfun()&#123;</div><div class="line">    this.a=[1,2];</div><div class="line">&#125;</div><div class="line">Parentfun.prototype.d=1;</div><div class="line">//创建子类</div><div class="line">function Childfun()&#123;</div><div class="line">    this.c=3;</div><div class="line">&#125;</div><div class="line">Childfun.prototype=new Parentfun();</div><div class="line">//创建objs1,obj2两个实例</div><div class="line">var objs1=new Childfun();</div><div class="line">var objs2=new Childfun();</div><div class="line">console.log(objs1.c);  //1  能够读到父类（Parentfun）原型上的属性</div><div class="line">console.log(objs2.a);  //[1,2]</div><div class="line">objs1.a.push(4);</div><div class="line">console.log(objs2.a); //[1,2,4]  </div><div class="line">//objs1对a的修改，直接影响了objs2.a的值，??</div><div class="line">//这是类式继承的缺点:</div><div class="line">//1、多个实例（objs1,objs2），实例(objs1)对父类进行操作，会影响其他实例(objs2);</div><div class="line">//2、在实例化父类（Parentfun）的时候，没法对父类（Parentfun）构造函数内的属性初始化。</div><div class="line">#对其他继承方式对比： 类式继承可以用instanceof 来检测某个对象是否是某个类的实例，无法初始化父类的属性</div></pre></td></tr></table></figure>
+<p>2.构造函数继承：通过call/apply</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line">//创建父类</div><div class="line">function Parentfun(a)&#123;</div><div class="line">    this.a=a;</div><div class="line">&#125;</div><div class="line">Parentfun.prototype.d=function()&#123;</div><div class="line">  console.log(&apos;aa&apos;);</div><div class="line">&#125;;</div><div class="line">//创建子类</div><div class="line">function Childfun(a)&#123;</div><div class="line">    Parentfun.call(this,a);</div><div class="line">&#125;</div><div class="line">//创建objs1,obj2两个实例</div><div class="line">var objs1=new Childfun([1,2]);</div><div class="line">var objs2=new Childfun([1,2]);</div><div class="line">console.log(objs2.a); //[1,2]</div><div class="line">objs1.a.push(4);</div><div class="line">console.log(objs1.a); //[1,2,4]</div><div class="line">console.log(objs2.a); //[1,2]</div><div class="line">objs1.d(); //&quot;error&quot;</div><div class="line">//没有类式继承的问题，但是父类（Parentfun）的方法（d）没法取到</div><div class="line">//构造函数继承的缺点：</div><div class="line">//无法取到父类的属性/方法 --&gt;原因是通过call/apply实现继承，这种类型的继承没涉及原型prototype</div><div class="line">#对其他继承方式对比： 无法通过instanceof来判断某个对象是否是某个类的实例，无法操作父类原型上的属性，但是可以传参对父类的属性初始化</div></pre></td></tr></table></figure>
+<h3 id="两种继承方式比较"><a href="#两种继承方式比较" class="headerlink" title="两种继承方式比较"></a>两种继承方式比较</h3><table>
+<thead>
+<tr>
+<th>继承方式</th>
+<th>instanceof能否判断</th>
+<th>能否操作父类原型</th>
+<th>能否初始化父类属性</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>类式继承</td>
+<td>能</td>
+<td>能</td>
+<td>不能</td>
+</tr>
+<tr>
+<td>构造函数继承</td>
+<td>不能</td>
+<td>不能</td>
+<td>能</td>
+</tr>
+</tbody>
+</table>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/03/28/js继承/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+  
     <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
